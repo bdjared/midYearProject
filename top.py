@@ -22,13 +22,25 @@ while run:
     keys = key.get_pressed()
 
     if keys[K_LEFT]:
-        x -= vel
+        if x - vel >= 0:
+            x -= vel
+        else:
+            x = 0
     if keys[K_RIGHT]:
-        x += vel
+        if x + vel <= 460:
+            x += vel
+        else:
+            x = 460
     if keys[K_UP]:
-        y -= vel
+        if y - vel >= 0:
+            y -= vel
+        else:
+            y = 0
     if keys[K_DOWN]:
-        y += vel
+        if y + vel <= 440:
+            y += vel
+        else:
+            y = 440
 
     win.fill((0, 0, 0))
     draw.rect(win, (255, 0, 0), (x, y, width, height))
