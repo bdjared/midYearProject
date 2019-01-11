@@ -46,5 +46,4 @@ while run:
     draw.rect(win, (255, 0, 0), (x, y, width, height))
     display.update()
 
-
 quit()
