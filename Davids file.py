@@ -8,7 +8,7 @@ class Application(Frame):
 
 
 root = Tk()
-root.title("Lazy Buttons 2")
+root.title("")
 root.geometry("200x85")
 app = Application(root)
 root.mainloop()
