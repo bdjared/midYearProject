@@ -5,11 +5,11 @@ win = display.set_mode((500, 500))
 
 display.set_caption("First Game")
 
-x = 50
-y = 50
-width = 40
-height = 60
-vel = 5
+x = 10
+y = 10
+width = 20
+height = 20
+vel = 20
 
 run = True
 while run:
