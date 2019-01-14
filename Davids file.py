@@ -23,8 +23,10 @@ class Application(Frame):
         self.bttn_3b.grid(row=1, column=1)
         self.bttn_4a.grid(row=1, column=2)
         self.bttn_4b.grid(row=1, column=3)
-
-
+        
+        Button(self,
+           text = "Click for Story",
+           ).grid(row = 11, column = 0, sticky = W)
 
 root = Tk()
 root.title("hi")
