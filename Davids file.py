@@ -4,7 +4,6 @@ from tkinter import *
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
-        self.grid()
         self.create_widgets()
 
     def create_widgets(self):
@@ -24,6 +23,7 @@ class Application(Frame):
         self.bttn_3b.grid(row=1, column=1)
         self.bttn_4a.grid(row=1, column=2)
         self.bttn_4b.grid(row=1, column=3)
+
 
 
 root = Tk()
