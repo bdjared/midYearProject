@@ -5,11 +5,11 @@ win = display.set_mode((500, 500))
 
 display.set_caption("First Game")
 
-x = 50
-y = 50
-width = 40
-height = 60
-vel = 5
+x = 0
+y = 0
+width = 20
+height = 20
+vel = 20
 
 run = True
 while run:
@@ -26,21 +26,25 @@ while run:
             x -= vel
         else:
             x = 0
+        time.delay(100)
     if keys[K_RIGHT]:
-        if x + vel <= 460:
+        if x + vel <= 480:
             x += vel
         else:
-            x = 460
+            x = 480
+        time.delay(100)
     if keys[K_UP]:
         if y - vel >= 0:
             y -= vel
         else:
             y = 0
+        time.delay(100)
     if keys[K_DOWN]:
-        if y + vel <= 440:
+        if y + vel <= 480:
             y += vel
         else:
-            y = 440
+            y = 480
+        time.delay(100)
 
     win.fill((0, 0, 0))
     draw.rect(win, (255, 0, 0), (x, y, width, height))

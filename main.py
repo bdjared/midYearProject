@@ -1,7 +1,7 @@
 from pygame import *
 from pygame_textinput import *
 init()
-textinput = TextInput()
+textinput = TextInput(initial_string="Player 1")
 win = display.set_mode((500, 500))
 clock = time.Clock()
 display.set_caption("Battleship")
