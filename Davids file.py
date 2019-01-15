@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif","photo8.gif"]
+#List = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif","photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif","photo8.gif"]]
 
 class Application(Frame):
     def __init__(self, master):
@@ -31,7 +31,7 @@ class Application(Frame):
 
 
     def get_image(self):
-        a = random.randint(0,7)
+        a = random.randint(0,15)
         b = list[a]
         del(list[a])
         return b
