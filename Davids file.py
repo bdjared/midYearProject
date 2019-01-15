@@ -1,5 +1,7 @@
 from tkinter import *
+import random
 
+list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif","photo8.gif"]
 
 class Application(Frame):
     def __init__(self, master):
@@ -24,6 +26,15 @@ class Application(Frame):
         self.bttn_7b = Button(self).grid(row=3, column=2, padx=10, pady=10, sticky=W)
         self.bttn_8a = Button(self).grid(row=3, column=4, padx=10, pady=10, sticky=W)
         self.bttn_8b = Button(self).grid(row=3, column=6, padx=10, pady=10, sticky=W)
+
+
+
+
+    def get_image(self):
+        a = random.randint(0,7)
+        b = list[a]
+        del(list[a])
+        return b
 
 
 root = Tk()
