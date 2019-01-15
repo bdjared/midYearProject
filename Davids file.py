@@ -26,10 +26,22 @@ class Application(Frame):
         self.bttn_2b = Button(self, image=photo2b)
         self.bttn_2b.photo = photo2b
         self.bttn_2b.grid(row=0, column=6, padx=10, pady=10, sticky=W)
-        self.bttn_3a = Button(self, image=self.get_image()).grid(row=1, column=0, padx=10, pady=10, sticky=W)
-        self.bttn_3b = Button(self, image=self.get_image()).grid(row=1, column=2, padx=10, pady=10, sticky=W)
-        self.bttn_4a = Button(self, image=self.get_image()).grid(row=1, column=4, padx=10, pady=10, sticky=W)
-        self.bttn_4b = Button(self, image=self.get_image()).grid(row=1, column=6, padx=10, pady=10, sticky=W)
+        photo3a = self.get_image()
+        self.bttn_3a = Button(self, image=photo3a)
+        self.bttn_3a.photo = photo3a
+        self.bttn_3a.grid(row=1, column=0, padx=10, pady=10, sticky=W)
+        photo3b = self.get_image()
+        self.bttn_3b = Button(self, image=photo3b)
+        self.bttn_3b.photo = photo3b
+        self.bttn_3b.grid(row=1, column=2, padx=10, pady=10, sticky=W)
+        photo4a = self.get_image()
+        self.bttn_4a = Button(self, image=photo4a)
+        self.bttn_4a.photo = photo4a
+        self.bttn_4a.grid(row=1, column=4, padx=10, pady=10, sticky=W)
+        photo4b = self.get_image()
+        self.bttn_4b = Button(self, image=photo4b)
+        self.bttn_4b.photo = photo4b
+        self.bttn_4b.grid(row=1, column=6, padx=10, pady=10, sticky=W)
         self.bttn_5a = Button(self, image=self.get_image()).grid(row=2, column=0, padx=10, pady=10, sticky=W)
         self.bttn_5b = Button(self, image=self.get_image()).grid(row=2, column=2, padx=10, pady=10, sticky=W)
         self.bttn_6a = Button(self, image=self.get_image()).grid(row=2, column=4, padx=10, pady=10, sticky=W)
