@@ -1,60 +1,85 @@
 from tkinter import *
 import random
 
-list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif","photo8.gif"]
 
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
+        self.photo_list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif", "photo7.gif",
+                           "photo8.gif"]
         self.grid()
         self.create_widgets()
 
     def create_widgets(self):
-        photo1a = self.get_image()
-        self.bttn_1a = Button(self, image=photo1a)
-        self.bttn_1a.photo = photo1a
+        photo = self.get_image()
+        self.bttn_1a = Button(self, image=photo)
+        self.bttn_1a.photo = photo
         self.bttn_1a.grid(row=0, column=0, padx=10, pady=10, sticky=W)
-        photo1b = self.get_image()
-        self.bttn_1b = Button(self, image=photo1b)
-        self.bttn_1b.photo = photo1b
+        photo = self.get_image()
+        self.bttn_1b = Button(self, image=photo)
+        self.bttn_1b.photo = photo
         self.bttn_1b.grid(row=0, column=2, padx=10, pady=10, sticky=W)
-        photo2a = self.get_image()
-        self.bttn_2a = Button(self, image=photo2a)
-        self.bttn_2a.photo = photo2a
+        photo = self.get_image()
+        self.bttn_2a = Button(self, image=photo)
+        self.bttn_2a.photo = photo
         self.bttn_2a.grid(row=0, column=4, padx=10, pady=10, sticky=W)
-        photo2b = self.get_image()
-        self.bttn_2b = Button(self, image=photo2b)
-        self.bttn_2b.photo = photo2b
+        photo = self.get_image()
+        self.bttn_2b = Button(self, image=photo)
+        self.bttn_2b.photo = photo
         self.bttn_2b.grid(row=0, column=6, padx=10, pady=10, sticky=W)
-        photo3a = self.get_image()
-        self.bttn_3a = Button(self, image=photo3a)
-        self.bttn_3a.photo = photo3a
+        photo = self.get_image()
+        self.bttn_3a = Button(self, image=photo)
+        self.bttn_3a.photo = photo
         self.bttn_3a.grid(row=1, column=0, padx=10, pady=10, sticky=W)
-        photo3b = self.get_image()
-        self.bttn_3b = Button(self, image=photo3b)
-        self.bttn_3b.photo = photo3b
+        photo = self.get_image()
+        self.bttn_3b = Button(self, image=photo)
+        self.bttn_3b.photo = photo
         self.bttn_3b.grid(row=1, column=2, padx=10, pady=10, sticky=W)
-        photo4a = self.get_image()
-        self.bttn_4a = Button(self, image=photo4a)
-        self.bttn_4a.photo = photo4a
+        photo = self.get_image()
+        self.bttn_4a = Button(self, image=photo)
+        self.bttn_4a.photo = photo
         self.bttn_4a.grid(row=1, column=4, padx=10, pady=10, sticky=W)
-        photo4b = self.get_image()
-        self.bttn_4b = Button(self, image=photo4b)
-        self.bttn_4b.photo = photo4b
+        photo = self.get_image()
+        self.bttn_4b = Button(self, image=photo)
+        self.bttn_4b.photo = photo
         self.bttn_4b.grid(row=1, column=6, padx=10, pady=10, sticky=W)
-        self.bttn_5a = Button(self, image=self.get_image()).grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.bttn_5b = Button(self, image=self.get_image()).grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        self.bttn_6a = Button(self, image=self.get_image()).grid(row=2, column=4, padx=10, pady=10, sticky=W)
-        self.bttn_6b = Button(self, image=self.get_image()).grid(row=2, column=6, padx=10, pady=10, sticky=W)
-        self.bttn_7a = Button(self, image=self.get_image()).grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.bttn_7b = Button(self, image=self.get_image()).grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        self.bttn_8a = Button(self, image=self.get_image()).grid(row=3, column=4, padx=10, pady=10, sticky=W)
-        self.bttn_8b = Button(self, image=self.get_image()).grid(row=3, column=6, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_5a = Button(self, image=photo)
+        self.bttn_5a.photo = photo
+        self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_5b = Button(self, image=photo)
+        self.bttn_5b.photo = photo
+        self.bttn_5a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_6a = Button(self, image=photo)
+        self.bttn_6a.photo = photo
+        self.bttn_6a.grid(row=2, column=4, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_6b = Button(self, image=photo)
+        self.bttn_6b.photo = photo
+        self.bttn_6b.grid(row=2, column=6, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_7a = Button(self, image=photo)
+        self.bttn_7a.photo = photo
+        self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_7b = Button(self, image=photo)
+        self.bttn_7b.photo = photo
+        self.bttn_7b.grid(row=3, column=2, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_8a = Button(self, image=photo)
+        self.bttn_8a.photo = photo
+        self.bttn_8a.grid(row=3, column=4, padx=10, pady=10, sticky=W)
+        photo = self.get_image()
+        self.bttn_8b = Button(self, image=photo)
+        self.bttn_8b.photo = photo
+        self.bttn_8b.grid(row=3, column=6, padx=10, pady=10, sticky=W)
 
     def get_image(self):
         a = random.randint(0, 7)
-        b = list[a]
-        del(list[a])
+        b = self.photo_list[a]
+        del(self.photo_list[a])
         return b
 
 
