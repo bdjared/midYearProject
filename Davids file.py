@@ -6,7 +6,8 @@ class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
         self.photo_list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif",
-                           "photo7.gif", "photo8.gif"]
+                           "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
+                           "photo5.gif", "photo6.gif", "photo7.gif", "photo8.gif"]
         self.grid()
         self.create_widgets()
 
@@ -77,9 +78,9 @@ class Application(Frame):
         self.bttn_8b.grid(row=3, column=6, padx=10, pady=10, sticky=W)
 
     def get_image(self):
-        a = random.randint(0, 7)
-        b = self.photo_list[a]
-        del(self.photo_list[a])
+        a = random.choice(self.photo_list)
+        b = PhotoImage(file=a)
+        self.photo_list.remove(a)
         return b
 
 
