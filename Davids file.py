@@ -26,7 +26,6 @@ class Application(Frame):
         self.bttn_8b = Button(self).grid(row=3, column=3)
 
 
-
 root = Tk()
 root.title("hi")
 root.geometry("200x85")
