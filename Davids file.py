@@ -86,6 +86,6 @@ class Application(Frame):
 
 root = Tk()
 root.title("hi")
-root.geometry("200x810")
+root.geometry("1000x400")
 app = Application(root)
 root.mainloop()
