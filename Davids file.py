@@ -78,7 +78,7 @@ class Application(Frame):
         self.bttn_8b = Button(self, image=self.photo8b)
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
-        self.flip()
+        self.master.after(2000, self.flip)
 
     def get_image(self):
         a = random.choice(self.photo_list)
@@ -136,7 +136,6 @@ class Application(Frame):
         self.bttn_8b.config(image=photo)
         self.bttn_8b.photo = photo
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
-        self.master.after(2000, self.flip)
 
     def hi(self):
         self.bttn_1a.config(image=self.photo1a)
