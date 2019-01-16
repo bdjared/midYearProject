@@ -2,6 +2,7 @@ from tkinter import *
 import random
 import time
 
+
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
@@ -86,8 +87,8 @@ class Application(Frame):
         return b
 
     def flip(self):
-        photo = PhotoImage(file = "blank.gif")
-        self.bttn_1a.config(image=photo, command=self.click_flip())
+        photo = PhotoImage(file="blank.gif")
+        self.bttn_1a.config(image=photo)
         self.bttn_1a.photo = photo
         self.bttn_1a.grid(row=0, column=0, padx=10, pady=10, sticky=W)
         self.bttn_1b.config(image=photo)
