@@ -51,7 +51,7 @@ class Application(Frame):
         photo = self.get_image()
         self.bttn_5b = Button(self, image=photo)
         self.bttn_5b.photo = photo
-        self.bttn_5a.grid(row=2, column=1, padx=10, pady=10, sticky=W)
+        self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
         photo = self.get_image()
         self.bttn_6a = Button(self, image=photo)
         self.bttn_6a.photo = photo
@@ -86,6 +86,6 @@ class Application(Frame):
 
 root = Tk()
 root.title("hi")
-root.geometry("200x810")
+root.geometry("1000x600")
 app = Application(root)
 root.mainloop()
