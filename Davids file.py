@@ -152,7 +152,7 @@ class Application(Frame):
 
 
 root = Tk()
-root.title("hi")
+root.title("hi there")
 root.geometry("1000x600")
 app = Application(root)
 root.mainloop()
