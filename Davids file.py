@@ -45,37 +45,37 @@ class Application(Frame):
         self.bttn_4b = Button(self, image=photo)
         self.bttn_4b.photo = photo
         self.bttn_4b.grid(row=1, column=3, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_5a = Button(self, image=photo)
-        self.bttn_5a.photo = photo
+        self.photo5a = self.get_image()
+        self.bttn_5a = Button(self, image=self.photo5a)
+        self.bttn_5a.photo = self.photo5a
         self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_5b = Button(self, image=photo)
-        self.bttn_5b.photo = photo
+        self.photo5b = self.get_image()
+        self.bttn_5b = Button(self, image=self.photo5b)
+        self.bttn_5b.photo = self.photo5b
         self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_6a = Button(self, image=photo)
-        self.bttn_6a.photo = photo
+        self.photo6a = self.get_image()
+        self.bttn_6a = Button(self, image=self.photo6a)
+        self.bttn_6a.photo = self.photo6a
         self.bttn_6a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_6b = Button(self, image=photo)
-        self.bttn_6b.photo = photo
+        self.photo6b = self.get_image()
+        self.bttn_6b = Button(self, image=self.photo6b)
+        self.bttn_6b.photo = self.photo6b
         self.bttn_6b.grid(row=2, column=3, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_7a = Button(self, image=photo)
-        self.bttn_7a.photo = photo
+        self.photo7a = self.get_image()
+        self.bttn_7a = Button(self, image=self.photo7a)
+        self.bttn_7a.photo = self.photo7a
         self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_7b = Button(self, image=photo)
-        self.bttn_7b.photo = photo
+        self.photo7b = self.get_image()
+        self.bttn_7b = Button(self, image=self.photo7b)
+        self.bttn_7b.photo = self.photo7b
         self.bttn_7b.grid(row=3, column=1, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_8a = Button(self, image=photo)
-        self.bttn_8a.photo = photo
+        self.photo8a = self.get_image()
+        self.bttn_8a = Button(self, image=self.photo8a)
+        self.bttn_8a.photo = self.photo8a
         self.bttn_8a.grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        photo = self.get_image()
-        self.bttn_8b = Button(self, image=photo)
-        self.bttn_8b.photo = photo
+        self.photo8b = self.get_image()
+        self.bttn_8b = Button(self, image=self.photo8b)
+        self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
         self.master.after(2000,self.flip)
 
