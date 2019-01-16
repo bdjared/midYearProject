@@ -152,7 +152,7 @@ class Application(Frame):
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
 
 root = Tk()
-root.title("hi")
+root.title("Matching")
 root.geometry("1000x600")
 app = Application(root)
 root.mainloop()
