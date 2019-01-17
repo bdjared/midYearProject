@@ -137,12 +137,9 @@ class Application(Frame):
         self.bttn_8b.photo = photo
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
 
-    def hi(self):
-        self.bttn_1a.config(image=self.photo1a)
-
 
 root = Tk()
-root.title("hi there")
-root.geometry("1000x600")
+root.title("Memory")
+root.geometry("400x500")
 app = Application(root)
 root.mainloop()
