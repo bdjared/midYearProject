@@ -89,7 +89,7 @@ class Application(Frame):
 
     def flip(self):
         photo = PhotoImage(file="blank.gif")
-        self.bttn_1a.config(image=photo)
+        self.bttn_1a.config(image=photo, command = self.game(self.bttn_1a, self.photo1a))
         self.bttn_1a.photo = photo
         self.bttn_1b.config(image=photo)
         self.bttn_1b.photo = photo
@@ -122,6 +122,9 @@ class Application(Frame):
         self.bttn_8b.config(image=photo)
         self.bttn_8b.photo = photo
 
+    def game(self, bttn, img):
+        bttn.config(image=img)
+        bttn.photo = img
 
 root = Tk()
 root.title("Memory")
