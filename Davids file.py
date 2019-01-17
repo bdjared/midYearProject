@@ -10,7 +10,7 @@ class Application(Frame):
                            "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
                            "photo5.gif", "photo6.gif", "photo7.gif", "photo8.gif"]
         self.grid()
-        Button(self, text="Click to Start!", command=self.create_widgets()).grid(row=0, column=0)
+        Button(self, text="Click to Start!", command=self.create_widgets).grid(row=0, column=0)
 
     def create_widgets(self):
         self.photo1a = self.get_image()
