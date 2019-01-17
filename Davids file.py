@@ -10,9 +10,11 @@ class Application(Frame):
                            "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
                            "photo5.gif", "photo6.gif", "photo7.gif", "photo8.gif"]
         self.grid()
-        Button(self, text="Click to Start!", command=self.create_widgets).grid(row=0, column=0)
+        self.start_bttn = Button(self, text="Click to Start!", command=self.create_widgets)
+        self.start_bttn.grid(row=0, column=0)
 
     def create_widgets(self):
+        self.start_bttn.destroy()
         self.photo1a = self.get_image()
         self.bttn_1a = Button(self, image=self.photo1a)
         self.bttn_1a.photo = self.photo1a
