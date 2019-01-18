@@ -1,5 +1,5 @@
 from tkinter import *
-import random as r
+import random
 from Marks_File import Timer
 
 
