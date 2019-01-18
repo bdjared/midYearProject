@@ -6,6 +6,7 @@ import top
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
+        self.timer = Timer()
         self.master = master
         self.photo_list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif",
                            "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
@@ -15,6 +16,8 @@ class Application(Frame):
         self.start_bttn.grid(row=0, column=0)
 
     def start_game(self):
+        self.timer.start_timer()
+
 
     def create_widgets(self):
         self.start_bttn.destroy()
@@ -140,7 +143,7 @@ class Application(Frame):
         self.bttn_8a.photo = self.photo
         self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8b, self.photo8b, self.show8b))
         self.bttn_8b.photo = self.photo
-        
+
     def switchImage(self, bttn, img, showing):
         if not showing:
             bttn.config(image=img)
