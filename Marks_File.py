@@ -1,6 +1,6 @@
 from tkinter import *
 
-class App(Frame):
+class Timer(Frame):
 
     def reset(self):
         self.timeron = False
@@ -48,7 +48,7 @@ class App(Frame):
             self.root.after(930, self.timer)
 
     def __init__(self, root):
-        super(App, self).__init__(root)
+        super(Timer, self).__init__(root)
 
         self.root = root
         root.title("Stop Watch")
@@ -70,7 +70,7 @@ class App(Frame):
 
 
 root = Tk()
-app = App(root)
+app = Timer(root)
 root.mainloop()
 
 

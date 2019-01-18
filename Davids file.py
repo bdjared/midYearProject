@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+from Marks_File import Timer
 
 
 class Application(Frame):
