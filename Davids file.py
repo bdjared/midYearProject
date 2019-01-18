@@ -1,5 +1,5 @@
 from tkinter import *
-import random as r
+import random
 from Marks_File import Timer
 import top
 
@@ -85,7 +85,7 @@ class Application(Frame):
         self.master.after(3000, self.flip)
 
     def get_image(self):
-        a = r.choice(self.photo_list)
+        a = random.choice(self.photo_list)
         b = PhotoImage(file=a)
         self.photo_list.remove(a)
         return b
