@@ -1,7 +1,7 @@
 from tkinter import *
 import random as r
 from Marks_File import Timer
-
+import top
 
 class Application(Frame):
     def __init__(self, master):
