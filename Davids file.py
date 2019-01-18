@@ -107,19 +107,19 @@ class Application(Frame):
         self.photo = PhotoImage(file="blank.gif")
         self.bttn_1a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
         self.bttn_1a.photo = self.photo
-        self.bttn_1b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_1b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1b, self.photo1b, self.show1b))
         self.bttn_1b.photo = self.photo
-        self.bttn_2a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_2a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_2a, self.photo2a, self.show2a))
         self.bttn_2a.photo = self.photo
-        self.bttn_2b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_2b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_2b, self.photo2b, self.show2b))
         self.bttn_2b.photo = self.photo
-        self.bttn_3a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_3a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_3a, self.photo3a, self.show3a))
         self.bttn_3a.photo = self.photo
-        self.bttn_3b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_3b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_3b, self.photo3b, self.show3b))
         self.bttn_3b.photo = self.photo
-        self.bttn_4a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_4a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_4a, self.photo4a, self.show4a))
         self.bttn_4a.photo = self.photo
-        self.bttn_4b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_4b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_4b, self.photo4b, self.show4b))
         self.bttn_4b.photo = self.photo
         self.bttn_5a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
         self.bttn_5a.photo = self.photo
