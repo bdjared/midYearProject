@@ -1,3 +1,4 @@
+import top
 import tkinter
 
 class Screen_character_selector (tkinter.Frame):
