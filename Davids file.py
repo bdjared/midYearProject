@@ -11,8 +11,11 @@ class Application(Frame):
                            "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
                            "photo5.gif", "photo6.gif", "photo7.gif", "photo8.gif"]
         self.grid()
-        self.start_bttn = Button(self, text="Click to Start!", command=self.create_widgets)
+        self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
         self.start_bttn.grid(row=0, column=0)
+
+    def start_game(self):
+
 
     def create_widgets(self):
         self.start_bttn.destroy()
