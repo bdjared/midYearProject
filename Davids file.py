@@ -88,39 +88,60 @@ class Application(Frame):
         return b
 
     def flip(self):
-        photo = PhotoImage(file="blank.gif")
-        self.bttn_1a.config(image=photo, command=lambda: self.bttn_1a.config(image=self.photo1a))
-        self.bttn_1a.photo = photo
-        self.bttn_1b.config(image=photo, command=lambda: self.bttn_1b.config(image=self.photo1b))
-        self.bttn_1b.photo = photo
-        self.bttn_2a.config(image=photo, command=lambda: self.bttn_2a.config(image=self.photo2a))
-        self.bttn_2a.photo = photo
-        self.bttn_2b.config(image=photo, command=lambda: self.bttn_2b.config(image=self.photo2b))
-        self.bttn_2b.photo = photo
-        self.bttn_3a.config(image=photo, command=lambda: self.bttn_3a.config(image=self.photo3a))
-        self.bttn_3a.photo = photo
-        self.bttn_3b.config(image=photo, command=lambda: self.bttn_3b.config(image=self.photo3b))
-        self.bttn_3b.photo = photo
-        self.bttn_4a.config(image=photo, command=lambda: self.bttn_4a.config(image=self.photo4a))
-        self.bttn_4a.photo = photo
-        self.bttn_4b.config(image=photo, command=lambda: self.bttn_4b.config(image=self.photo4b))
-        self.bttn_4b.photo = photo
-        self.bttn_5a.config(image=photo, command=lambda: self.bttn_5a.config(image=self.photo5a))
-        self.bttn_5a.photo = photo
-        self.bttn_5b.config(image=photo, command=lambda: self.bttn_5b.config(image=self.photo5b))
-        self.bttn_5b.photo = photo
-        self.bttn_6a.config(image=photo, command=lambda: self.bttn_6a.config(image=self.photo6a))
-        self.bttn_6a.photo = photo
-        self.bttn_6b.config(image=photo, command=lambda: self.bttn_6b.config(image=self.photo6b))
-        self.bttn_6b.photo = photo
-        self.bttn_7a.config(image=photo, command=lambda: self.bttn_7a.config(image=self.photo7a))
-        self.bttn_7a.photo = photo
-        self.bttn_7b.config(image=photo, command=lambda: self.bttn_7b.config(image=self.photo7b))
-        self.bttn_7b.photo = photo
-        self.bttn_8a.config(image=photo, command=lambda: self.bttn_8a.config(image=self.photo8a))
-        self.bttn_8a.photo = photo
-        self.bttn_8b.config(image=photo, command=lambda: self.bttn_8b.config(image=self.photo8b))
-        self.bttn_8b.photo = photo
+        self.show1a = False
+        self.show1b = False
+        self.show2a = False
+        self.show2b = False
+        self.show3a = False
+        self.show3b = False
+        self.show4a = False
+        self.show4b = False
+        self.show5a = False
+        self.show5b = False
+        self.show6a = False
+        self.show6b = False
+        self.show7a = False
+        self.show7b = False
+        self.show8a = False
+        self.show8b = False
+        self.photo = PhotoImage(file="blank.gif")
+        self.bttn_1a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_1a.photo = self.photo
+        self.bttn_1b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_1b.photo = self.photo
+        self.bttn_2a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_2a.photo = self.photo
+        self.bttn_2b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_2b.photo = self.photo
+        self.bttn_3a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_3a.photo = self.photo
+        self.bttn_3b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_3b.photo = self.photo
+        self.bttn_4a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_4a.photo = self.photo
+        self.bttn_4b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_4b.photo = self.photo
+        self.bttn_5a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_5a.photo = self.photo
+        self.bttn_5b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_5b.photo = self.photo
+        self.bttn_6a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_6a.photo = self.photo
+        self.bttn_6b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_6b.photo = self.photo
+        self.bttn_7a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_7a.photo = self.photo
+        self.bttn_7b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_7b.photo = self.photo
+        self.bttn_8a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_8a.photo = self.photo
+        self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a, self.show1a))
+        self.bttn_8b.photo = self.photo
+        
+    def switchImage(self, bttn, img, showing):
+        if not showing:
+            bttn.config(image=img)
+            bttn.photo = img
 
 
 root = Tk()
