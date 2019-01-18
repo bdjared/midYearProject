@@ -16,7 +16,6 @@ class Application(Frame):
 
     def start_game(self):
 
-
     def create_widgets(self):
         self.start_bttn.destroy()
         self.photo1a = self.get_image()
