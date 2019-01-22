@@ -16,7 +16,7 @@ class Application(Frame):
         self.start_bttn.grid(row=0, column=0)
 
     def start_game(self):
-        self.timer.start_timer()
+        self.timer.start_timer
 
 
     def create_widgets(self):

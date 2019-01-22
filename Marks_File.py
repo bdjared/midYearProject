@@ -65,8 +65,8 @@ class Timer(Frame):
         self.bt3 = Button(self, text="Reset", command=self.reset, font=("Courier 12 bold"))
         self.lb.grid(row=1, column=1)
         self.bt1.grid(row=2,column=1)
-#        self.bt2.grid(2,2)
-#        self.bt3.grid(2,3)
+        self.bt2.grid(2,2)
+        self.bt3.grid(2,3)
         self.timeron = False
 
 
