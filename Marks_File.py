@@ -149,7 +149,7 @@ class Application(Frame):
             bttn.config(image=img)
             bttn.photo = img
 
-class Timer(Frame):
+class Timer(object):
 
     def reset(self):
         self.timeron = False

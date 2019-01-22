@@ -1,6 +1,6 @@
 from tkinter import *
 import random
-import top
+
 
 
 class Application(Frame):
@@ -18,7 +18,7 @@ class Application(Frame):
                            "photo5.gif", "photo6.gif", "photo7.gif", "photo8.gif"]
         self.grid()
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
-        self.start_bttn.grid(row=0, column=0)
+        self.start_bttn.grid(row=0, column=0,sticky =W+E)
 
     def start_game(self):
         self.create_widgets()
