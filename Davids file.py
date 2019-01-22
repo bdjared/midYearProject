@@ -151,6 +151,7 @@ class Application(Frame):
 
             if self.amt_showing == 2:
                 self.master.after(1000, self.flip)
+            # we need to somehow make seperate variables for the ones that are already flipped
 
     def timer_time(self):
         self.master.after(3000, self.start_timer())
