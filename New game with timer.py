@@ -6,7 +6,12 @@ import random
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
-        self.timer = Timer(root)
+        self.t = StringVar()
+        self.t.set("00:00:00")
+        self.lb = Label(self, textvariable=self.t)
+        self.lb.config(font=("Courier 40 bold"))
+        self.lb.grid(row=5, column=0, columnspan = 5)
+        self.timeron = False
         self.master = master
         self.photo_list = ["photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif", "photo5.gif", "photo6.gif",
                            "photo7.gif", "photo8.gif", "photo1.gif", "photo2.gif", "photo3.gif", "photo4.gif",
@@ -16,7 +21,8 @@ class Application(Frame):
         self.start_bttn.grid(row=0, column=0)
 
     def start_game(self):
-        self.timer.start_timer
+        self.create_widgets()
+        self.start_timer()
 
 
     def create_widgets(self):
@@ -149,7 +155,7 @@ class Application(Frame):
             bttn.config(image=img)
             bttn.photo = img
 
-class Timer(Frame):
+
 
     def reset(self):
         self.timeron = False
@@ -194,27 +200,9 @@ class Timer(Frame):
 
             self.t.set(self.d)
 
-            self.root.after(930, self.timer)
+            self.after(930, self.timer)
 
-    def __init__(self, root):
-        super(Timer, self).__init__(root)
 
-        self.root = root
-        root.title("Stop Watch")
-        root.geometry("600x500")
-        root.resizable(False, False)
-        self.grid()
-        self.t = StringVar()
-        self.t.set("00:00:00")
-        self.lb = Label(self, textvariable=self.t)
-        self.lb.config(font=("Courier 40 bold"))
-        self.bt1 = Button(self, text="Start", command=self.start_timer, font=("Courier 12 bold"))
-        self.bt2 = Button(self, text="Stop", command=self.stop, font=("Courier 12 bold"))
-        self.bt3 = Button(self, text="Reset", command=self.reset, font=("Courier 12 bold"))
-        self.lb.grid(row=1, column=1)
-        self.bt1.grid(row=2,column=1)
-        self.bt2.grid(row =2, column = 2)
-        self.bt3.grid(row = 2,column = 3)
         self.timeron = False
 
 
