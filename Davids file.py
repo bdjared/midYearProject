@@ -22,7 +22,7 @@ class Application(Frame):
 
     def start_game(self):
         self.create_widgets()
-        self.timer_time()
+
 
     def create_widgets(self):
         self.start_bttn.destroy()
@@ -149,8 +149,7 @@ class Application(Frame):
             if self.amt_showing == 2:
                 self.master.after(1000, self.flip)
 
-    def timer_time(self):
-        self.master.after(3000, self.start_timer())
+
 
     def reset(self):
         self.timeron = False
