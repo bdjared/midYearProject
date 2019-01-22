@@ -135,7 +135,7 @@ class Application(Frame):
         count = 7
         while count == 7:
             self.start_timer()
-            count +=1
+            count += 1
 
     def switchImage(self, bttn, img):
         if self.amt_showing == 2:
