@@ -22,7 +22,7 @@ class Application(Frame):
 
     def start_game(self):
         self.create_widgets()
-        self.timer_time()
+
 
     def create_widgets(self):
         self.start_bttn.destroy()
@@ -133,6 +133,7 @@ class Application(Frame):
         self.bttn_8a.photo = self.photo
         self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8b, self.photo8b))
         self.bttn_8b.photo = self.photo
+        self.start_timer()
 
     def switchImage(self, bttn, img):
         if self.amt_showing == 2:
