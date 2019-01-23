@@ -90,6 +90,7 @@ class Application(Frame):
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
         self.master.after(3000, self.flip)
+        self.after(3000, self.start_timer)
 
     def get_image(self):
         a = random.choice(self.photo_list)
@@ -132,10 +133,6 @@ class Application(Frame):
         self.bttn_8a.photo = self.photo
         self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8b, self.photo8b))
         self.bttn_8b.photo = self.photo
-        count = 7
-        while count == 7:
-            self.start_timer()
-            count += 1
 
     def switchImage(self, bttn, img):
         if self.amt_showing == 2:
