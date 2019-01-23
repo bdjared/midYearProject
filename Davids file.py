@@ -90,6 +90,8 @@ class Application(Frame):
         self.bttn_8b = Button(self, image=self.photo8b)
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
+        self.score_bttn = Button(text=self.score)
+        self.score_bttn.grid(row=0, column=4)
         self.master.after(3000, self.flip)
         self.after(3000, self.start_timer)
 
@@ -160,8 +162,10 @@ class Application(Frame):
                 if first_bttn.photo == second_bttn.photo:
                     self.amt_showing = 0
                     self.score += 1
+                    self.score_bttn.config(text=self.score)
 
-                self.master.after(1000, self.flip)
+                else:
+                    self.master.after(1000, self.flip)
             # we need to somehow make seperate variables for the ones that are already flipped
 
     def timer_time(self):
