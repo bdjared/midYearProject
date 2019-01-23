@@ -6,6 +6,7 @@ class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
         self.t = StringVar()
+        self.dict_list = [1, 2, 3, 4, 5, 6, 7, 8]
         self.t.set("00:00:00")
         self.lb = Label(self, textvariable=self.t)
         self.lb.config(font=("Courier 40 bold"))
@@ -94,14 +95,16 @@ class Application(Frame):
         self.after(3000, self.start_timer)
 
     def get_image(self):
-        a = str(random.randint(1, 8))
-        b = self.photo_list[a]
+        a = random.choice(self.dict_list)
+        b = self.photo_list[str(a)]
         c = b[0]
         d = PhotoImage(file=c)
-        if len(self.photo_list[a]) == 0:
-            del self.photo_list[a]
+        if len(self.photo_list[str(a)]) == 0:
+            self.photo_list[str(a)] = []
+            self.dict_list.remove(a)
         else:
-            self.photo_list[a] = [c]
+            del self.photo_list[str(a)]
+            self.photo_list[str(a)] = [c]
         return d
 
     def flip(self):
