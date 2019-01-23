@@ -94,10 +94,14 @@ class Application(Frame):
         self.after(3000, self.start_timer)
 
     def get_image(self):
-        b = random.choice(self.photo_list)
+        a = str(random.randint(1, 8))
+        b = self.photo_list[a]
         c = b[0]
         d = PhotoImage(file=c)
-        del self.photo_list[b[0]]
+        if len(self.photo_list[a]) == 0:
+            del self.photo_list[a]
+        else:
+            self.photo_list[a] = [c]
         return d
 
     def flip(self):
