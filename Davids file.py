@@ -12,80 +12,95 @@ class Application(Frame):
         self.lb.config(font=("Courier 40 bold"))
         self.lb.grid(row=5, column=0, columnspan=5)
         self.timeron = False
+        self.bttn_1a = Button(self)
+        self.bttn_1b = Button(self)
+        self.bttn_2a = Button(self)
+        self.bttn_2b = Button(self)
+        self.bttn_3a = Button(self)
+        self.bttn_3b = Button(self)
+        self.bttn_4a = Button(self)
+        self.bttn_4b = Button(self)
+        self.bttn_5a = Button(self)
+        self.bttn_5b = Button(self)
+        self.bttn_6a = Button(self)
+        self.bttn_6b = Button(self)
+        self.bttn_7a = Button(self)
+        self.bttn_7b = Button(self)
+        self.bttn_8a = Button(self)
+        self.bttn_8b = Button(self)
         self.master = master
         self.photo_list = {"1": ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"], "3": ["photo3.gif", "photo3.gif"],  "4": ["photo4.gif", "photo4.gif"],  "5": ["photo5.gif", "photo5.gif"],  "6": ["photo6.gif", "photo6.gif"],  "7": ["photo7.gif", "photo7.gif"],  "8": ["photo8.gif", "photo8.gif"]}
         self.grid()
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
-        self.start_bttn.grid(row=0, column=0,sticky =W+E)
+        self.start_bttn.grid(row=0, column=0, sticky=W+E)
         self.score = 0
 
     def start_game(self):
         self.create_widgets()
 
-
     def create_widgets(self):
         self.start_bttn.destroy()
-        self.photo1a = self.get_image()
+        self.photo1a = self.get_image(self.bttn_1a)
         self.bttn_1a = Button(self, image=self.photo1a)
         self.bttn_1a.photo = self.photo1a
         self.bttn_1a.grid(row=0, column=0, padx=10, pady=10, sticky=W)
-        self.photo1b = self.get_image()
+        self.photo1b = self.get_image(self.bttn_1b)
         self.bttn_1b = Button(self, image=self.photo1b)
         self.bttn_1b.photo = self.photo1b
         self.bttn_1b.grid(row=0, column=1, padx=10, pady=10, sticky=W)
-        self.photo2a = self.get_image()
+        self.photo2a = self.get_image(self.bttn_2a)
         self.bttn_2a = Button(self, image=self.photo2a)
         self.bttn_2a.photo = self.photo2a
         self.bttn_2a.grid(row=0, column=2, padx=10, pady=10, sticky=W)
-        self.photo2b = self.get_image()
+        self.photo2b = self.get_image(self.bttn_2b)
         self.bttn_2b = Button(self, image=self.photo2b)
         self.bttn_2b.photo = self.photo2b
         self.bttn_2b.grid(row=0, column=3, padx=10, pady=10, sticky=W)
-        self.photo3a = self.get_image()
+        self.photo3a = self.get_image(self.bttn_3a)
         self.bttn_3a = Button(self, image=self.photo3a)
         self.bttn_3a.photo = self.photo3a
         self.bttn_3a.grid(row=1, column=0, padx=10, pady=10, sticky=W)
-        self.photo3b = self.get_image()
+        self.photo3b = self.get_image(self.bttn_3b)
         self.bttn_3b = Button(self, image=self.photo3b)
         self.bttn_3b.photo = self.photo3b
         self.bttn_3b.grid(row=1, column=1, padx=10, pady=10, sticky=W)
-        self.photo4a = self.get_image()
+        self.photo4a = self.get_image(self.bttn_4a)
         self.bttn_4a = Button(self, image=self.photo4a)
         self.bttn_4a.photo = self.photo4a
         self.bttn_4a.grid(row=1, column=2, padx=10, pady=10, sticky=W)
-        self.photo4b = self.get_image()
+        self.photo4b = self.get_image(self.bttn_4b)
         self.bttn_4b = Button(self, image=self.photo4b)
         self.bttn_4b.photo = self.photo4b
         self.bttn_4b.grid(row=1, column=3, padx=10, pady=10, sticky=W)
-        self.photo5a = self.get_image()
+        self.photo5a = self.get_image(self.bttn_5a)
         self.bttn_5a = Button(self, image=self.photo5a)
         self.bttn_5a.photo = self.photo5a
         self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.photo5b = self.get_image()
+        self.photo5b = self.get_image(self.bttn_5b)
         self.bttn_5b = Button(self, image=self.photo5b)
         self.bttn_5b.photo = self.photo5b
         self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
-        self.photo6a = self.get_image()
+        self.photo6a = self.get_image(self.bttn_6a)
         self.bttn_6a = Button(self, image=self.photo6a)
         self.bttn_6a.photo = self.photo6a
         self.bttn_6a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        self.photo6b = self.get_image()
+        self.photo6b = self.get_image(self.bttn_6b)
         self.bttn_6b = Button(self, image=self.photo6b)
         self.bttn_6b.photo = self.photo6b
         self.bttn_6b.grid(row=2, column=3, padx=10, pady=10, sticky=W)
-        self.photo7a = self.get_image()
+        self.photo7a = self.get_image(self.bttn_7a)
         self.bttn_7a = Button(self, image=self.photo7a)
         self.bttn_7a.photo = self.photo7a
         self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.photo7b = self.get_image()
+        self.photo7b = self.get_image(self.bttn_7b)
         self.bttn_7b = Button(self, image=self.photo7b)
         self.bttn_7b.photo = self.photo7b
         self.bttn_7b.grid(row=3, column=1, padx=10, pady=10, sticky=W)
-        self.photo8a = self.get_image()
+        self.photo8a = self.get_image(self.bttn_8a)
         self.bttn_8a = Button(self, image=self.photo8a)
         self.bttn_8a.photo = self.photo8a
         self.bttn_8a.grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        self.photo8b = self.get_image()
+        self.photo8b = self.get_image(self.bttn_8b)
         self.bttn_8b = Button(self, image=self.photo8b)
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
@@ -94,11 +109,12 @@ class Application(Frame):
         self.master.after(3000, self.flip)
         self.after(3000, self.start_timer)
 
-    def get_image(self):
+    def get_image(self, bttn):
         a = random.choice(self.dict_list)
         b = self.photo_list[str(a)]
         c = b[0]
         d = PhotoImage(file=c)
+        bttn.photo_string = c
         if len(self.photo_list[str(a)]) == 0:
             self.photo_list[str(a)] = []
             self.dict_list.remove(a)
