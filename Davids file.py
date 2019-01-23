@@ -18,6 +18,7 @@ class Application(Frame):
         self.grid()
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
         self.start_bttn.grid(row=0, column=0,sticky =W+E)
+        self.score = 0
 
     def start_game(self):
         self.create_widgets()
@@ -133,8 +134,13 @@ class Application(Frame):
         self.bttn_8a.photo = self.photo
         self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8b, self.photo8b))
         self.bttn_8b.photo = self.photo
+        self.blank_bttn = Button(image=self.photo)
+        self.blank_bttn.photo = self.photo
 
     def switchImage(self, bttn, img):
+        first_bttn = self.blank_bttn
+        second_bttn = self.bttn_1a
+
         if self.amt_showing == 2:
             return
 
@@ -153,6 +159,8 @@ class Application(Frame):
             if self.amt_showing == 2:
                 if first_bttn.photo == second_bttn.photo:
                     self.amt_showing = 0
+                    self.score += 1
+
                 self.master.after(1000, self.flip)
             # we need to somehow make seperate variables for the ones that are already flipped
 
