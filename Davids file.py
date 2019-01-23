@@ -145,8 +145,14 @@ class Application(Frame):
             bttn.config(image=img)
             bttn.photo = img
             self.amt_showing += 1
+            if self.amt_showing == 1:
+                first_bttn = bttn
+            elif self.amt_showing == 2:
+                second_bttn = bttn
 
             if self.amt_showing == 2:
+                if first_bttn.photo == second_bttn.photo:
+                    self.amt_showing = 0
                 self.master.after(1000, self.flip)
             # we need to somehow make seperate variables for the ones that are already flipped
 
