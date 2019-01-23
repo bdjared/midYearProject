@@ -12,7 +12,7 @@ class Application(Frame):
         self.lb.grid(row=5, column=0, columnspan=5)
         self.timeron = False
         self.master = master
-        self.photo_list = { "1" : ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"], "3": ["photo3.gif", "photo3.gif"],  "4": ["photo4.gif", "photo4.gif"],  "5": ["photo5.gif", "photo5.gif"],  "6": ["photo6.gif", "photo6.gif"],  "7": ["photo7.gif", "photo7.gif"],  "8": ["photo8.gif", "photo8.gif"]}
+        self.photo_list = {"1": ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"], "3": ["photo3.gif", "photo3.gif"],  "4": ["photo4.gif", "photo4.gif"],  "5": ["photo5.gif", "photo5.gif"],  "6": ["photo6.gif", "photo6.gif"],  "7": ["photo7.gif", "photo7.gif"],  "8": ["photo8.gif", "photo8.gif"]}
         self.grid()
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
         self.start_bttn.grid(row=0, column=0,sticky =W+E)
@@ -94,10 +94,12 @@ class Application(Frame):
         self.after(3000, self.start_timer)
 
     def get_image(self):
-        a = random.choice(self.photo_list)
-        b = PhotoImage(file=a)
-        self.photo_list.remove(a)
-        return b
+        a = random.randint(1, 8)
+        b = self.photo_list[str(a)]
+        c = b[0]
+        d = PhotoImage(file=c)
+        del self.photo_list[a[0]]
+        return d
 
     def flip(self):
         self.amt_showing = 0
