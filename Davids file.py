@@ -118,9 +118,8 @@ class Application(Frame):
         c = b[0]
         d = PhotoImage(file=c)
         bttn.photo_string = c
-        if len(self.photo_list[str(a)]) == 0:
-            self.photo_list[str(a)] = []
-            self.dict_list.remove(a)
+        if len(self.photo_list[str(a)]) - 1 == 0:
+            del self.photo_list[str(a)]
         else:
             del self.photo_list[str(a)]
             self.photo_list[str(a)] = [c]
@@ -128,6 +127,10 @@ class Application(Frame):
 
     def flip(self):
         self.amt_showing = 0
+        self.photo_list = {"1": ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"],
+                           "3": ["photo3.gif", "photo3.gif"], "4": ["photo4.gif", "photo4.gif"],
+                           "5": ["photo5.gif", "photo5.gif"], "6": ["photo6.gif", "photo6.gif"],
+                           "7": ["photo7.gif", "photo7.gif"], "8": ["photo8.gif", "photo8.gif"]}
         self.photo = PhotoImage(file="blank.gif")
         self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1a))
         self.bttn_1a.photo = self.photo
@@ -191,7 +194,6 @@ class Application(Frame):
 
                 else:
                     self.master.after(1000, self.flip)
-            # we need to somehow make seperate variables for the ones that are already flipped
 
     def timer_time(self):
         self.master.after(3000, self.start_timer())
@@ -245,6 +247,6 @@ class Application(Frame):
 
 root = Tk()
 root.title("Memory")
-root.geometry("400x500")
+root.geometry("400x575")
 app = Application(root)
 root.mainloop()
