@@ -9,7 +9,7 @@ class Application(Frame):
         self.dict_list = [1, 2, 3, 4, 5, 6, 7, 8]
         self.t.set("00:00:00")
         self.lb = Label(self, textvariable=self.t)
-        self.lb.config(font=("Courier 40 bold"))
+        self.lb.config(font="Courier 40 bold")
         self.lb.grid(row=5, column=0, columnspan=5)
         self.timeron = False
         self.bttn_1a = Button(self)
@@ -129,42 +129,42 @@ class Application(Frame):
     def flip(self):
         self.amt_showing = 0
         self.photo = PhotoImage(file="blank.gif")
-        self.bttn_1a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1a, self.photo1a))
+        self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1a))
         self.bttn_1a.photo = self.photo
-        self.bttn_1b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_1b, self.photo1b))
+        self.bttn_1b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1b, self.photo1b))
         self.bttn_1b.photo = self.photo
-        self.bttn_2a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_2a, self.photo2a))
+        self.bttn_2a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2a, self.photo2a))
         self.bttn_2a.photo = self.photo
-        self.bttn_2b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_2b, self.photo2b))
+        self.bttn_2b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2b, self.photo2b))
         self.bttn_2b.photo = self.photo
-        self.bttn_3a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_3a, self.photo3a))
+        self.bttn_3a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3a, self.photo3a))
         self.bttn_3a.photo = self.photo
-        self.bttn_3b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_3b, self.photo3b))
+        self.bttn_3b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3b, self.photo3b))
         self.bttn_3b.photo = self.photo
-        self.bttn_4a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_4a, self.photo4a))
+        self.bttn_4a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4a, self.photo4a))
         self.bttn_4a.photo = self.photo
-        self.bttn_4b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_4b, self.photo4b))
+        self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4b))
         self.bttn_4b.photo = self.photo
-        self.bttn_5a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_5a, self.photo5a))
+        self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5a))
         self.bttn_5a.photo = self.photo
-        self.bttn_5b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_5b, self.photo5b))
+        self.bttn_5b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5b, self.photo5b))
         self.bttn_5b.photo = self.photo
-        self.bttn_6a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_6a, self.photo6a))
+        self.bttn_6a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6a, self.photo6a))
         self.bttn_6a.photo = self.photo
-        self.bttn_6b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_6b, self.photo6b))
+        self.bttn_6b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6b, self.photo6b))
         self.bttn_6b.photo = self.photo
-        self.bttn_7a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_7a, self.photo7a))
+        self.bttn_7a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7a, self.photo7a))
         self.bttn_7a.photo = self.photo
-        self.bttn_7b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_7b, self.photo7b))
+        self.bttn_7b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7b, self.photo7b))
         self.bttn_7b.photo = self.photo
-        self.bttn_8a.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8a, self.photo8a))
+        self.bttn_8a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8a, self.photo8a))
         self.bttn_8a.photo = self.photo
-        self.bttn_8b.config(image=self.photo, command=lambda: self.switchImage(self.bttn_8b, self.photo8b))
+        self.bttn_8b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8b, self.photo8b))
         self.bttn_8b.photo = self.photo
         self.blank_bttn = Button(image=self.photo)
         self.blank_bttn.photo = self.photo
 
-    def switchImage(self, bttn, img):
+    def switch_image(self, bttn, img):
         first_bttn = self.blank_bttn
         second_bttn = self.bttn_1a
 
@@ -209,30 +209,30 @@ class Application(Frame):
         self.timeron = False
 
     def timer(self):
-        if self.timeron == True:
+        if self.timeron:
             self.d = str(self.t.get())
             h, m, s = map(int, self.d.split(":"))
 
             h = int(h)
             m = int(m)
             s = int(s)
-            if (s < 59):
+            if s < 59:
                 s += 1
-            elif (s == 59):
+            elif s == 59:
                 s = 0
-                if (m < 59):
+                if m < 59:
                     m += 1
-                elif (m == 59):
+                elif m == 59:
                     h += 1
-            if (h < 10):
+            if h < 10:
                 h = str(0) + str(h)
             else:
                 h = str(h)
-            if (m < 10):
+            if m < 10:
                 m = str(0) + str(m)
             else:
                 m = str(m)
-            if (s < 10):
+            if s < 10:
                 s = str(0) + str(s)
             else:
                 s = str(s)
@@ -241,7 +241,6 @@ class Application(Frame):
             self.t.set(self.d)
 
             self.after(930, self.timer)
-
 
 
 root = Tk()
