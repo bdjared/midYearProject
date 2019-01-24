@@ -120,6 +120,7 @@ class Application(Frame):
         bttn.photo_string = c
         if len(self.photo_list[str(a)]) - 1 == 0:
             del self.photo_list[str(a)]
+            self.dict_list.remove(a)
         else:
             del self.photo_list[str(a)]
             self.photo_list[str(a)] = [c]
