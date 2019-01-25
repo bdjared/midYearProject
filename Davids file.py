@@ -7,12 +7,16 @@ class Application(Frame):
         super(Application, self).__init__(master)
         self.t = StringVar()
         self.dict_list = [1, 2, 3, 4, 5, 6, 7, 8]
-        a = PhotoImage(file ="photo1.gif")
-        b = PhotoImage(file ="photo2.gif")
-        self.photo_list = {"1": [a, a], "2": [b, b],
-                           "3": ["photo3.gif", "photo3.gif"], "4": ["photo4.gif", "photo4.gif"],
-                           "5": ["photo5.gif", "photo5.gif"], "6": ["photo6.gif", "photo6.gif"],
-                           "7": ["photo7.gif", "photo7.gif"], "8": ["photo8.gif", "photo8.gif"]}
+        a = PhotoImage(file="photo1.gif")
+        b = PhotoImage(file="photo2.gif")
+        c = PhotoImage(file="photo3.gif")
+        d = PhotoImage(file="photo4.gif")
+        e = PhotoImage(file="photo5.gif")
+        f = PhotoImage(file="photo6.gif")
+        g = PhotoImage(file="photo7.gif")
+        h = PhotoImage(file="photo8.gif")
+        self.photo_list = {"1": [a, a], "2": [b, b], "3": [c, c], "4": [d, d],
+                           "5": [e, e], "6": [f, f], "7": [g, g], "8": [h, h]}
         self.t.set("00:00:00")
         self.lb = Label(self, textvariable=self.t)
         self.lb.config(font="Courier 40 bold")
