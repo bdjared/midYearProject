@@ -122,14 +122,13 @@ class Application(Frame):
         a = random.choice(self.dict_list)
         b = self.photo_list[str(a)]
         c = b[0]
-        d = PhotoImage(file=c)
         if len(self.photo_list[str(a)]) - 1 == 0:
             del self.photo_list[str(a)]
             self.dict_list.remove(a)
         else:
             del self.photo_list[str(a)]
             self.photo_list[str(a)] = [c]
-        return d
+        return c
 
     def flip(self):
         self.amt_showing = 0
