@@ -7,6 +7,12 @@ class Application(Frame):
         super(Application, self).__init__(master)
         self.t = StringVar()
         self.dict_list = [1, 2, 3, 4, 5, 6, 7, 8]
+        a = PhotoImage(file ="photo1.gif")
+        b = PhotoImage(file ="photo2.gif")
+        self.photo_list = {"1": [a, a], "2": [b, b],
+                           "3": ["photo3.gif", "photo3.gif"], "4": ["photo4.gif", "photo4.gif"],
+                           "5": ["photo5.gif", "photo5.gif"], "6": ["photo6.gif", "photo6.gif"],
+                           "7": ["photo7.gif", "photo7.gif"], "8": ["photo8.gif", "photo8.gif"]}
         self.t.set("00:00:00")
         self.lb = Label(self, textvariable=self.t)
         self.lb.config(font="Courier 40 bold")
@@ -29,10 +35,6 @@ class Application(Frame):
         self.bttn_8a = Button(self)
         self.bttn_8b = Button(self)
         self.master = master
-        self.photo_list = {"1": ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"],
-                           "3": ["photo3.gif", "photo3.gif"], "4": ["photo4.gif", "photo4.gif"],
-                           "5": ["photo5.gif", "photo5.gif"], "6": ["photo6.gif", "photo6.gif"],
-                           "7": ["photo7.gif", "photo7.gif"], "8": ["photo8.gif", "photo8.gif"]}
         self.grid()
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
         self.start_bttn.grid(row=0, column=0, sticky=W+E)
@@ -117,7 +119,6 @@ class Application(Frame):
         b = self.photo_list[str(a)]
         c = b[0]
         d = PhotoImage(file=c)
-        bttn.photo_string = c
         if len(self.photo_list[str(a)]) - 1 == 0:
             del self.photo_list[str(a)]
             self.dict_list.remove(a)
@@ -128,10 +129,6 @@ class Application(Frame):
 
     def flip(self):
         self.amt_showing = 0
-        self.photo_list = {"1": ["photo1.gif", "photo1.gif"], "2": ["photo2.gif", "photo2.gif"],
-                           "3": ["photo3.gif", "photo3.gif"], "4": ["photo4.gif", "photo4.gif"],
-                           "5": ["photo5.gif", "photo5.gif"], "6": ["photo6.gif", "photo6.gif"],
-                           "7": ["photo7.gif", "photo7.gif"], "8": ["photo8.gif", "photo8.gif"]}
         self.photo = PhotoImage(file="blank.gif")
         self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1a))
         self.bttn_1a.photo = self.photo
