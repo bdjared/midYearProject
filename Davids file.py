@@ -251,3 +251,4 @@ root.title("Memory")
 root.geometry("400x575")
 app = Application(root)
 root.mainloop()
+
