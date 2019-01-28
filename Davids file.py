@@ -149,21 +149,21 @@ class Application(Frame):
         self.bttn_4a.photo = self.photo
         self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4))
         self.bttn_4b.photo = self.photo
-        self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5a))
+        self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5))
         self.bttn_5a.photo = self.photo
-        self.bttn_5b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5b, self.photo5b))
+        self.bttn_5b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5b, self.photo5))
         self.bttn_5b.photo = self.photo
-        self.bttn_6a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6a, self.photo6a))
+        self.bttn_6a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6a, self.photo6))
         self.bttn_6a.photo = self.photo
-        self.bttn_6b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6b, self.photo6b))
+        self.bttn_6b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6b, self.photo6))
         self.bttn_6b.photo = self.photo
-        self.bttn_7a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7a, self.photo7a))
+        self.bttn_7a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7a, self.photo7))
         self.bttn_7a.photo = self.photo
-        self.bttn_7b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7b, self.photo7b))
+        self.bttn_7b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7b, self.photo7))
         self.bttn_7b.photo = self.photo
-        self.bttn_8a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8a, self.photo8a))
+        self.bttn_8a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8a, self.photo8))
         self.bttn_8a.photo = self.photo
-        self.bttn_8b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8b, self.photo8b))
+        self.bttn_8b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8b, self.photo8))
         self.bttn_8b.photo = self.photo
         self.blank_bttn = Button(image=self.photo)
         self.blank_bttn.photo = self.photo
