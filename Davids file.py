@@ -49,69 +49,69 @@ class Application(Frame):
 
     def create_widgets(self):
         self.start_bttn.destroy()
-        self.photo1 = self.get_image(self.bttn_1a)
-        self.bttn_1a = Button(self, image=self.photo1)
-        self.bttn_1a.photo = self.photo1
+        self.photo1a = self.get_image(self.bttn_1a)
+        self.bttn_1a = Button(self, image=self.photo1a)
+        self.bttn_1a.photo = self.photo1a
         self.bttn_1a.grid(row=0, column=0, padx=10, pady=10, sticky=W)
-        self.photo1 = self.get_image(self.bttn_1b)
-        self.bttn_1b = Button(self, image=self.photo1)
-        self.bttn_1b.photo = self.photo1
+        self.photo1b = self.get_image(self.bttn_1b)
+        self.bttn_1b = Button(self, image=self.photo1b)
+        self.bttn_1b.photo = self.photo1b
         self.bttn_1b.grid(row=0, column=1, padx=10, pady=10, sticky=W)
-        self.photo2 = self.get_image(self.bttn_2a)
-        self.bttn_2a = Button(self, image=self.photo2)
-        self.bttn_2a.photo = self.photo2
+        self.photo2a = self.get_image(self.bttn_2a)
+        self.bttn_2a = Button(self, image=self.photo2a)
+        self.bttn_2a.photo = self.photo2a
         self.bttn_2a.grid(row=0, column=2, padx=10, pady=10, sticky=W)
-        self.photo2 = self.get_image(self.bttn_2b)
-        self.bttn_2b = Button(self, image=self.photo2)
-        self.bttn_2b.photo = self.photo2
+        self.photo2b = self.get_image(self.bttn_2b)
+        self.bttn_2b = Button(self, image=self.photo2b)
+        self.bttn_2b.photo = self.photo2b
         self.bttn_2b.grid(row=0, column=3, padx=10, pady=10, sticky=W)
-        self.photo3 = self.get_image(self.bttn_3a)
-        self.bttn_3a = Button(self, image=self.photo3)
-        self.bttn_3a.photo = self.photo3
+        self.photo3a = self.get_image(self.bttn_3a)
+        self.bttn_3a = Button(self, image=self.photo3a)
+        self.bttn_3a.photo = self.photo3a
         self.bttn_3a.grid(row=1, column=0, padx=10, pady=10, sticky=W)
-        self.photo3 = self.get_image(self.bttn_3b)
-        self.bttn_3b = Button(self, image=self.photo3)
-        self.bttn_3b.photo = self.photo3
+        self.photo3b = self.get_image(self.bttn_3b)
+        self.bttn_3b = Button(self, image=self.photo3b)
+        self.bttn_3b.photo = self.photo3b
         self.bttn_3b.grid(row=1, column=1, padx=10, pady=10, sticky=W)
-        self.photo4 = self.get_image(self.bttn_4a)
-        self.bttn_4a = Button(self, image=self.photo4)
-        self.bttn_4a.photo = self.photo4
+        self.photo4a = self.get_image(self.bttn_4a)
+        self.bttn_4a = Button(self, image=self.photo4a)
+        self.bttn_4a.photo = self.photo4a
         self.bttn_4a.grid(row=1, column=2, padx=10, pady=10, sticky=W)
-        self.photo4 = self.get_image(self.bttn_4b)
-        self.bttn_4b = Button(self, image=self.photo4)
-        self.bttn_4b.photo = self.photo4
+        self.photo4b = self.get_image(self.bttn_4b)
+        self.bttn_4b = Button(self, image=self.photo4b)
+        self.bttn_4b.photo = self.photo4b
         self.bttn_4b.grid(row=1, column=3, padx=10, pady=10, sticky=W)
-        self.photo5 = self.get_image(self.bttn_5a)
-        self.bttn_5a = Button(self, image=self.photo5)
-        self.bttn_5a.photo = self.photo5
+        self.photo5a = self.get_image(self.bttn_5a)
+        self.bttn_5a = Button(self, image=self.photo5a)
+        self.bttn_5a.photo = self.photo5a
         self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.photo5 = self.get_image(self.bttn_5b)
-        self.bttn_5b = Button(self, image=self.photo5)
-        self.bttn_5b.photo = self.photo5
+        self.photo5b = self.get_image(self.bttn_5b)
+        self.bttn_5b = Button(self, image=self.photo5b)
+        self.bttn_5b.photo = self.photo5b
         self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
-        self.photo6 = self.get_image(self.bttn_6a)
-        self.bttn_6a = Button(self, image=self.photo6)
-        self.bttn_6a.photo = self.photo6
+        self.photo6a = self.get_image(self.bttn_6a)
+        self.bttn_6a = Button(self, image=self.photo6a)
+        self.bttn_6a.photo = self.photo6a
         self.bttn_6a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        self.photo6 = self.get_image(self.bttn_6b)
-        self.bttn_6b = Button(self, image=self.photo6)
-        self.bttn_6b.photo = self.photo6
+        self.photo6b = self.get_image(self.bttn_6b)
+        self.bttn_6b = Button(self, image=self.photo6b)
+        self.bttn_6b.photo = self.photo6b
         self.bttn_6b.grid(row=2, column=3, padx=10, pady=10, sticky=W)
-        self.photo7 = self.get_image(self.bttn_7a)
-        self.bttn_7a = Button(self, image=self.photo7)
-        self.bttn_7a.photo = self.photo7
+        self.photo7a = self.get_image(self.bttn_7a)
+        self.bttn_7a = Button(self, image=self.photo7a)
+        self.bttn_7a.photo = self.photo7a
         self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.photo7 = self.get_image(self.bttn_7b)
-        self.bttn_7b = Button(self, image=self.photo7)
-        self.bttn_7b.photo = self.photo7
+        self.photo7b = self.get_image(self.bttn_7b)
+        self.bttn_7b = Button(self, image=self.photo7b)
+        self.bttn_7b.photo = self.photo7b
         self.bttn_7b.grid(row=3, column=1, padx=10, pady=10, sticky=W)
-        self.photo8 = self.get_image(self.bttn_8a)
-        self.bttn_8a = Button(self, image=self.photo8)
-        self.bttn_8a.photo = self.photo8
+        self.photo8a = self.get_image(self.bttn_8a)
+        self.bttn_8a = Button(self, image=self.photo8a)
+        self.bttn_8a.photo = self.photo8a
         self.bttn_8a.grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        self.photo8 = self.get_image(self.bttn_8b)
-        self.bttn_8b = Button(self, image=self.photo8)
-        self.bttn_8b.photo = self.photo8
+        self.photo8b = self.get_image(self.bttn_8b)
+        self.bttn_8b = Button(self, image=self.photo8b)
+        self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
         self.score_lbl = Label(text="Score: %d" % self.score)
         self.score_lbl.grid(row=0, column=4)
@@ -133,37 +133,37 @@ class Application(Frame):
     def flip(self):
         self.amt_showing = 0
         self.photo = PhotoImage(file="blank.gif")
-        self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1))
+        self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1a))
         self.bttn_1a.photo = self.photo
-        self.bttn_1b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1b, self.photo1))
+        self.bttn_1b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1b, self.photo1b))
         self.bttn_1b.photo = self.photo
-        self.bttn_2a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2a, self.photo2))
+        self.bttn_2a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2a, self.photo2a))
         self.bttn_2a.photo = self.photo
-        self.bttn_2b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2b, self.photo2))
+        self.bttn_2b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2b, self.photo2b))
         self.bttn_2b.photo = self.photo
-        self.bttn_3a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3a, self.photo3))
+        self.bttn_3a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3a, self.photo3a))
         self.bttn_3a.photo = self.photo
-        self.bttn_3b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3b, self.photo3))
+        self.bttn_3b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3b, self.photo3b))
         self.bttn_3b.photo = self.photo
-        self.bttn_4a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4a, self.photo4))
+        self.bttn_4a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4a, self.photo4a))
         self.bttn_4a.photo = self.photo
-        self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4))
+        self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4b))
         self.bttn_4b.photo = self.photo
-        self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5))
+        self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5a))
         self.bttn_5a.photo = self.photo
-        self.bttn_5b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5b, self.photo5))
+        self.bttn_5b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5b, self.photo5b))
         self.bttn_5b.photo = self.photo
-        self.bttn_6a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6a, self.photo6))
+        self.bttn_6a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6a, self.photo6a))
         self.bttn_6a.photo = self.photo
-        self.bttn_6b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6b, self.photo6))
+        self.bttn_6b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_6b, self.photo6b))
         self.bttn_6b.photo = self.photo
-        self.bttn_7a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7a, self.photo7))
+        self.bttn_7a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7a, self.photo7a))
         self.bttn_7a.photo = self.photo
-        self.bttn_7b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7b, self.photo7))
+        self.bttn_7b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_7b, self.photo7b))
         self.bttn_7b.photo = self.photo
-        self.bttn_8a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8a, self.photo8))
+        self.bttn_8a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8a, self.photo8a))
         self.bttn_8a.photo = self.photo
-        self.bttn_8b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8b, self.photo8))
+        self.bttn_8b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_8b, self.photo8b))
         self.bttn_8b.photo = self.photo
         self.blank_bttn = Button(image=self.photo)
         self.blank_bttn.photo = self.photo
@@ -251,4 +251,3 @@ root.title("Memory")
 root.geometry("400x575")
 app = Application(root)
 root.mainloop()
-
