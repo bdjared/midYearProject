@@ -133,21 +133,21 @@ class Application(Frame):
     def flip(self):
         self.amt_showing = 0
         self.photo = PhotoImage(file="blank.gif")
-        self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1a))
+        self.bttn_1a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1a, self.photo1))
         self.bttn_1a.photo = self.photo
-        self.bttn_1b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1b, self.photo1b))
+        self.bttn_1b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_1b, self.photo1))
         self.bttn_1b.photo = self.photo
-        self.bttn_2a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2a, self.photo2a))
+        self.bttn_2a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2a, self.photo2))
         self.bttn_2a.photo = self.photo
-        self.bttn_2b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2b, self.photo2b))
+        self.bttn_2b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_2b, self.photo2))
         self.bttn_2b.photo = self.photo
-        self.bttn_3a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3a, self.photo3a))
+        self.bttn_3a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3a, self.photo3))
         self.bttn_3a.photo = self.photo
-        self.bttn_3b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3b, self.photo3b))
+        self.bttn_3b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_3b, self.photo3))
         self.bttn_3b.photo = self.photo
-        self.bttn_4a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4a, self.photo4a))
+        self.bttn_4a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4a, self.photo4))
         self.bttn_4a.photo = self.photo
-        self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4b))
+        self.bttn_4b.config(image=self.photo, command=lambda: self.switch_image(self.bttn_4b, self.photo4))
         self.bttn_4b.photo = self.photo
         self.bttn_5a.config(image=self.photo, command=lambda: self.switch_image(self.bttn_5a, self.photo5a))
         self.bttn_5a.photo = self.photo
