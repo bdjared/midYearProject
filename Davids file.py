@@ -113,8 +113,8 @@ class Application(Frame):
         self.bttn_8b = Button(self, image=self.photo8b)
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
-        self.score_bttn = Button(text=self.score)
-        self.score_bttn.grid(row=0, column=4)
+        self.score_lbl = Label(text="Score: %d" % self.score)
+        self.score_lbl.grid(row=0, column=4)
         self.master.after(3000, self.flip)
         self.after(3000, self.start_timer)
 
@@ -191,7 +191,7 @@ class Application(Frame):
                 if first_bttn.photo == second_bttn.photo:
                     self.amt_showing = 0
                     self.score += 1
-                    self.score_bttn.config(text=self.score)
+                    self.score_lbl.config(text="Score: %d" % self.score)
 
                 else:
                     self.master.after(1000, self.flip)
