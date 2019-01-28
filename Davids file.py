@@ -81,37 +81,37 @@ class Application(Frame):
         self.bttn_4b = Button(self, image=self.photo4)
         self.bttn_4b.photo = self.photo4
         self.bttn_4b.grid(row=1, column=3, padx=10, pady=10, sticky=W)
-        self.photo5a = self.get_image(self.bttn_5a)
+        self.photo5 = self.get_image(self.bttn_5a)
         self.bttn_5a = Button(self, image=self.photo5a)
-        self.bttn_5a.photo = self.photo5a
+        self.bttn_5a.photo = self.photo5
         self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.photo5b = self.get_image(self.bttn_5b)
+        self.photo5 = self.get_image(self.bttn_5b)
         self.bttn_5b = Button(self, image=self.photo5b)
-        self.bttn_5b.photo = self.photo5b
+        self.bttn_5b.photo = self.photo5
         self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
-        self.photo6a = self.get_image(self.bttn_6a)
+        self.photo6 = self.get_image(self.bttn_6a)
         self.bttn_6a = Button(self, image=self.photo6a)
-        self.bttn_6a.photo = self.photo6a
+        self.bttn_6a.photo = self.photo6
         self.bttn_6a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        self.photo6b = self.get_image(self.bttn_6b)
+        self.photo6 = self.get_image(self.bttn_6b)
         self.bttn_6b = Button(self, image=self.photo6b)
-        self.bttn_6b.photo = self.photo6b
+        self.bttn_6b.photo = self.photo6
         self.bttn_6b.grid(row=2, column=3, padx=10, pady=10, sticky=W)
-        self.photo7a = self.get_image(self.bttn_7a)
+        self.photo7 = self.get_image(self.bttn_7a)
         self.bttn_7a = Button(self, image=self.photo7a)
-        self.bttn_7a.photo = self.photo7a
+        self.bttn_7a.photo = self.photo7
         self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.photo7b = self.get_image(self.bttn_7b)
+        self.photo7 = self.get_image(self.bttn_7b)
         self.bttn_7b = Button(self, image=self.photo7b)
-        self.bttn_7b.photo = self.photo7b
+        self.bttn_7b.photo = self.photo7
         self.bttn_7b.grid(row=3, column=1, padx=10, pady=10, sticky=W)
-        self.photo8a = self.get_image(self.bttn_8a)
+        self.photo8 = self.get_image(self.bttn_8a)
         self.bttn_8a = Button(self, image=self.photo8a)
-        self.bttn_8a.photo = self.photo8a
+        self.bttn_8a.photo = self.photo8
         self.bttn_8a.grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        self.photo8b = self.get_image(self.bttn_8b)
+        self.photo8 = self.get_image(self.bttn_8b)
         self.bttn_8b = Button(self, image=self.photo8b)
-        self.bttn_8b.photo = self.photo8b
+        self.bttn_8b.photo = self.photo8
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
         self.score_lbl = Label(text="Score: %d" % self.score)
         self.score_lbl.grid(row=0, column=4)
