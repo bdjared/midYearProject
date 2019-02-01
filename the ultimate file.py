@@ -14,7 +14,7 @@ class Application(tk.Frame):
         self.var_dict = {}
         self.create_photos()
         self.lb = tk.Label(self, textvariable=self.t)
-        self.lb.config(font="Courier 20 bold")
+        self.lb.config(font="Courier 24 bold")
         self.lb.grid(row=5, column=0, columnspan=5)
 
         self.start_bttn = tk.Button(self, text="Click to Start!", command=self.create_tiles)
