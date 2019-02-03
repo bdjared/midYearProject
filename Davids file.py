@@ -169,9 +169,9 @@ class Application(Frame):
         self.blank_bttn.photo = self.photo
 
     def switch_image(self, bttn, img):
-        if self.amt_showing == 0:
-            self.first_bttn = self.blank_bttn
-            self.second_bttn = self.bttn_1a
+
+        self.first_bttn = self.blank_bttn
+        self.second_bttn = self.bttn_1a
 
         if self.amt_showing == 2:
             return
