@@ -239,7 +239,7 @@ class Application(Frame):
 
         if self.amt_showing < 2:
             bttn.config(text= img)
-            bttn.photo = img
+            bttn.text = img
             self.amt_showing += 1
             if self.amt_showing == 1:
                 first_bttn = bttn
