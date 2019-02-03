@@ -53,10 +53,11 @@ class Application(tk.Frame):
             self.what = tk.Button(self, image=self.photo)
             self.what['command'] = lambda idx=i, binst=self.what: self.click(binst)
             self.what.grid(row=temp[0], column=temp[1], padx=10, pady=10, sticky=tk.W)
-            self.switch_image(self.what,self.what.)
+            self.switch_image(self.what,self.what.image_names())
+
     def switch_image(self, bttn, img):
-        first_bttn = self.blank_bttn
-        second_bttn = self.bttn_1a
+        first_bttn = self.photo
+        second_bttn = self.phot
 
         if self.amt_showing == 2:
             return

@@ -169,8 +169,9 @@ class Application(Frame):
         self.blank_bttn.photo = self.photo
 
     def switch_image(self, bttn, img):
-        first_bttn = self.blank_bttn
-        second_bttn = self.bttn_1a
+        if self.amt_showing == 0:
+            self.first_bttn = self.blank_bttn
+            self.second_bttn = self.bttn_1a
 
         if self.amt_showing == 2:
             return
@@ -183,12 +184,14 @@ class Application(Frame):
             bttn.photo = img
             self.amt_showing += 1
             if self.amt_showing == 1:
-                first_bttn = bttn
+                self.first_bttn=bttn
+                self.a = self.first_bttn.image_names()
             elif self.amt_showing == 2:
-                second_bttn = bttn
+                self.second_bttn=bttn
+                self.b = self.second_bttn.image_names()
 
             if self.amt_showing == 2:
-                if first_bttn.photo == second_bttn.photo:
+                if self.a == self.b:
                     self.amt_showing = 0
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
