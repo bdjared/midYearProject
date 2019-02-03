@@ -234,8 +234,8 @@ class Application(Frame):
         if self.amt_showing == 2:
             return
 
-        #if bttn.text == text:
-            #return
+        if bttn.config(text = img):
+            return
 
         if self.amt_showing < 2:
             bttn.config(text= img)
@@ -247,7 +247,7 @@ class Application(Frame):
                 second_bttn = bttn
 
             if self.amt_showing == 2:
-                if first_bttn.text == second_bttn.text:
+                if first_bttn.config(text = img) == second_bttn.config(text = img):
                     self.amt_showing = 0
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
