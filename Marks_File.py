@@ -243,11 +243,13 @@ class Application(Frame):
             self.amt_showing += 1
             if self.amt_showing == 1:
                 first_bttn = bttn
+                self.image_1 = first_bttn.grid()
             elif self.amt_showing == 2:
                 second_bttn = bttn
+                self.image_2 = second_bttn.grid()
 
             if self.amt_showing == 2:
-                if first_bttn.config(text = img) == second_bttn.config(text = img):
+                if self.image_1 == self.image_2:
                     self.amt_showing = 0
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
