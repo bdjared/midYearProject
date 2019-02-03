@@ -53,7 +53,34 @@ class Application(tk.Frame):
             self.what = tk.Button(self, image=self.photo)
             self.what['command'] = lambda idx=i, binst=self.what: self.click(binst)
             self.what.grid(row=temp[0], column=temp[1], padx=10, pady=10, sticky=tk.W)
+            self.switch_image(self.what,self.what.)
+    def switch_image(self, bttn, img):
+        first_bttn = self.blank_bttn
+        second_bttn = self.bttn_1a
 
+        if self.amt_showing == 2:
+            return
+
+        if bttn.photo == img:
+            return
+
+        if self.amt_showing < 2:
+            bttn.config(image=img)
+            bttn.photo = img
+            self.amt_showing += 1
+            if self.amt_showing == 1:
+                first_bttn = bttn
+            elif self.amt_showing == 2:
+                second_bttn = bttn
+
+            if self.amt_showing == 2:
+                if first_bttn.photo == second_bttn.photo:
+                    self.amt_showing = 0
+                    self.score += 1
+                    self.score_lbl.config(text="Score: %d" % self.score)
+
+                else:
+                    self.master.after(1000, self.flip)
     def click(self, binst):
         binst.destroy()
 
