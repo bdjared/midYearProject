@@ -3,6 +3,7 @@ import random
 from tkinter import messagebox
 import time
 
+
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
@@ -51,67 +52,67 @@ class Application(Frame):
 
     def create_widgets(self):
         self.start_bttn.destroy()
-        self.photo1a = self.get_image(self.bttn_1a)
+        self.photo1a = self.get_image()
         self.bttn_1a = Button(self, image=self.photo1a)
         self.bttn_1a.photo = self.photo1a
         self.bttn_1a.grid(row=0, column=0, padx=10, pady=10, sticky=W)
-        self.photo1b = self.get_image(self.bttn_1b)
+        self.photo1b = self.get_image()
         self.bttn_1b = Button(self, image=self.photo1b)
         self.bttn_1b.photo = self.photo1b
         self.bttn_1b.grid(row=0, column=1, padx=10, pady=10, sticky=W)
-        self.photo2a = self.get_image(self.bttn_2a)
+        self.photo2a = self.get_image()
         self.bttn_2a = Button(self, image=self.photo2a)
         self.bttn_2a.photo = self.photo2a
         self.bttn_2a.grid(row=0, column=2, padx=10, pady=10, sticky=W)
-        self.photo2b = self.get_image(self.bttn_2b)
+        self.photo2b = self.get_image()
         self.bttn_2b = Button(self, image=self.photo2b)
         self.bttn_2b.photo = self.photo2b
         self.bttn_2b.grid(row=0, column=3, padx=10, pady=10, sticky=W)
-        self.photo3a = self.get_image(self.bttn_3a)
+        self.photo3a = self.get_image()
         self.bttn_3a = Button(self, image=self.photo3a)
         self.bttn_3a.photo = self.photo3a
         self.bttn_3a.grid(row=1, column=0, padx=10, pady=10, sticky=W)
-        self.photo3b = self.get_image(self.bttn_3b)
+        self.photo3b = self.get_image()
         self.bttn_3b = Button(self, image=self.photo3b)
         self.bttn_3b.photo = self.photo3b
         self.bttn_3b.grid(row=1, column=1, padx=10, pady=10, sticky=W)
-        self.photo4a = self.get_image(self.bttn_4a)
+        self.photo4a = self.get_image()
         self.bttn_4a = Button(self, image=self.photo4a)
         self.bttn_4a.photo = self.photo4a
         self.bttn_4a.grid(row=1, column=2, padx=10, pady=10, sticky=W)
-        self.photo4b = self.get_image(self.bttn_4b)
+        self.photo4b = self.get_image()
         self.bttn_4b = Button(self, image=self.photo4b)
         self.bttn_4b.photo = self.photo4b
         self.bttn_4b.grid(row=1, column=3, padx=10, pady=10, sticky=W)
-        self.photo5a = self.get_image(self.bttn_5a)
+        self.photo5a = self.get_image()
         self.bttn_5a = Button(self, image=self.photo5a)
         self.bttn_5a.photo = self.photo5a
         self.bttn_5a.grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.photo5b = self.get_image(self.bttn_5b)
+        self.photo5b = self.get_image()
         self.bttn_5b = Button(self, image=self.photo5b)
         self.bttn_5b.photo = self.photo5b
         self.bttn_5b.grid(row=2, column=1, padx=10, pady=10, sticky=W)
-        self.photo6a = self.get_image(self.bttn_6a)
+        self.photo6a = self.get_image()
         self.bttn_6a = Button(self, image=self.photo6a)
         self.bttn_6a.photo = self.photo6a
         self.bttn_6a.grid(row=2, column=2, padx=10, pady=10, sticky=W)
-        self.photo6b = self.get_image(self.bttn_6b)
+        self.photo6b = self.get_image()
         self.bttn_6b = Button(self, image=self.photo6b)
         self.bttn_6b.photo = self.photo6b
         self.bttn_6b.grid(row=2, column=3, padx=10, pady=10, sticky=W)
-        self.photo7a = self.get_image(self.bttn_7a)
+        self.photo7a = self.get_image()
         self.bttn_7a = Button(self, image=self.photo7a)
         self.bttn_7a.photo = self.photo7a
         self.bttn_7a.grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.photo7b = self.get_image(self.bttn_7b)
+        self.photo7b = self.get_image()
         self.bttn_7b = Button(self, image=self.photo7b)
         self.bttn_7b.photo = self.photo7b
         self.bttn_7b.grid(row=3, column=1, padx=10, pady=10, sticky=W)
-        self.photo8a = self.get_image(self.bttn_8a)
+        self.photo8a = self.get_image()
         self.bttn_8a = Button(self, image=self.photo8a)
         self.bttn_8a.photo = self.photo8a
         self.bttn_8a.grid(row=3, column=2, padx=10, pady=10, sticky=W)
-        self.photo8b = self.get_image(self.bttn_8b)
+        self.photo8b = self.get_image()
         self.bttn_8b = Button(self, image=self.photo8b)
         self.bttn_8b.photo = self.photo8b
         self.bttn_8b.grid(row=3, column=3, padx=10, pady=10, sticky=W)
@@ -120,7 +121,7 @@ class Application(Frame):
         self.master.after(3000, self.flip)
         self.after(3000, self.start_timer)
 
-    def get_image(self, bttn):
+    def get_image(self):
         a = random.choice(self.dict_list)
         b = self.photo_list[str(a)]
         c = b[0]
@@ -202,13 +203,12 @@ class Application(Frame):
                     self.score_lbl.config(text="Score: %d" % self.score)
                     if self.score == 8:
                         self.master.after(1500, self.win_message())
-
-
                 else:
                     self.master.after(1000, self.flip)
+
     def win_message(self):
-        time = self.d
-        messagebox.showinfo(title='Success!', message='You win! Time: %s' % time)
+        final_time = self.d
+        messagebox.showinfo(title='Success!', message='You win! Time: %s' % final_time)
 
     def timer_time(self):
         self.master.after(3000, self.start_timer())

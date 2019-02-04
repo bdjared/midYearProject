@@ -1,5 +1,4 @@
 class Switch_image(object):
-    def
     def switch_image(self, bttn, img):
         if self.amt_showing == 0:
             self.first_bttn = self.blank_bttn
