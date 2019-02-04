@@ -185,10 +185,10 @@ class Application(Frame):
             self.amt_showing += 1
             if self.amt_showing == 1:
                 self.first_bttn=bttn
-                self.a = self.first_bttn.image_names()
+                self.a = img
             elif self.amt_showing == 2:
                 self.second_bttn=bttn
-                self.b = self.second_bttn.image_names()
+                self.b = img
 
             if self.amt_showing == 2:
                 if self.a == self.b:
