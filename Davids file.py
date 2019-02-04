@@ -167,6 +167,9 @@ class Application(Frame):
         self.bttn_8b.photo = self.photo
         self.blank_bttn = Button(image=self.photo)
         self.blank_bttn.photo = self.photo
+        self.score = 0
+        self.score_lbl = Label(text="Score: %d" % self.score)
+        self.score_lbl.grid(row=0, column=4)
 
     def switch_image(self, bttn, img):
 
