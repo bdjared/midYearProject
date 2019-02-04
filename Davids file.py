@@ -201,11 +201,14 @@ class Application(Frame):
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
                     if self.score == 8:
-                        duration = self.start_time-time.monotonic()
-                        messagebox.showinfo(title='Success!', message='You win! Time: {:.1f}'.format(duration))
+                        self.master.after(1500, self.win_message())
+
+
                 else:
                     self.master.after(1000, self.flip)
-
+    def win_message(self):
+        time = self.d
+        messagebox.showinfo(title='Success!', message='You win! Time: %s' % time)
 
     def timer_time(self):
         self.master.after(3000, self.start_timer())
