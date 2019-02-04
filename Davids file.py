@@ -190,10 +190,10 @@ class Application(Frame):
             bttn.photo = img
             self.amt_showing += 1
             if self.amt_showing == 1:
-                self.first_bttn=bttn
+                self.first_bttn = bttn
                 self.a = img
             elif self.amt_showing == 2:
-                self.second_bttn=bttn
+                self.second_bttn = bttn
                 self.b = img
 
             if self.amt_showing == 2:
