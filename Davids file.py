@@ -1,6 +1,7 @@
 from tkinter import *
 import random
-
+from tkinter import messagebox
+import time
 
 class Application(Frame):
     def __init__(self, master):
@@ -43,6 +44,7 @@ class Application(Frame):
         self.start_bttn = Button(self, text="Click to Start!", command=self.start_game)
         self.start_bttn.grid(row=0, column=0, sticky=W+E)
         self.score = 0
+        self.start_time = time.monotonic()
 
     def start_game(self):
         self.create_widgets()
@@ -198,9 +200,12 @@ class Application(Frame):
                     self.amt_showing = 0
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
-
+                    if self.score == 8:
+                        duration = self.start_time-time.monotonic()
+                        messagebox.showinfo(title='Success!', message='You win! Time: {:.1f}'.format(duration))
                 else:
                     self.master.after(1000, self.flip)
+
 
     def timer_time(self):
         self.master.after(3000, self.start_timer())
