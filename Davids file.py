@@ -202,6 +202,7 @@ class Application(Frame):
                     self.score += 1
                     self.score_lbl.config(text="Score: %d" % self.score)
                     if self.score == 8:
+                        self.stop()
                         self.master.after(1500, self.win_message())
                 else:
                     self.master.after(1000, self.flip)
